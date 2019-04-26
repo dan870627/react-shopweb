@@ -1,4 +1,4 @@
-const API = '../../api/drinks.json';
+const API = 'https://dan870627.github.io/react-shopweb/api/drinks.json';
 
 function get(){
     console.log(API);
