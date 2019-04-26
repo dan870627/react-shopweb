@@ -1,15 +1,15 @@
 {
-    "main.css": "/react-shopweb/docs/static/css/main.bc127e99.chunk.css",
-    "main.js": "/react-shopweb/docs/static/js/main.e47b89b0.chunk.js",
-    "main.js.map": "/react-shopweb/docs/static/js/main.e47b89b0.chunk.js.map",
-    "runtime~main.js": "/react-shopweb/docs/static/js/runtime~main.653cb07e.js",
-    "runtime~main.js.map": "/react-shopweb/docs/static/js/runtime~main.653cb07e.js.map",
-    "static/css/2.39a94384.chunk.css": "/react-shopweb/docs/static/css/2.39a94384.chunk.css",
-    "static/js/2.4071c3b1.chunk.js": "/react-shopweb/docs/static/js/2.4071c3b1.chunk.js",
-    "static/js/2.4071c3b1.chunk.js.map": "/react-shopweb/docs/static/js/2.4071c3b1.chunk.js.map",
-    "index.html": "/react-shopweb/docs/index.html",
-    "precache-manifest.55cee78375e7b9fa8a1d25215ea1c956.js": "/react-shopweb/docs/precache-manifest.55cee78375e7b9fa8a1d25215ea1c956.js",
-    "service-worker.js": "/react-shopweb/docs/service-worker.js",
-    "static/css/2.39a94384.chunk.css.map": "/react-shopweb/docs/static/css/2.39a94384.chunk.css.map",
-    "static/css/main.bc127e99.chunk.css.map": "/react-shopweb/docs/static/css/main.bc127e99.chunk.css.map"
+    "main.css": "/docs/static/css/main.bc127e99.chunk.css",
+    "main.js": "/docs/static/js/main.e47b89b0.chunk.js",
+    "main.js.map": "/docs/static/js/main.e47b89b0.chunk.js.map",
+    "runtime~main.js": "/docs/static/js/runtime~main.653cb07e.js",
+    "runtime~main.js.map": "/docs/static/js/runtime~main.653cb07e.js.map",
+    "static/css/2.39a94384.chunk.css": "/docs/static/css/2.39a94384.chunk.css",
+    "static/js/2.4071c3b1.chunk.js": "/docs/static/js/2.4071c3b1.chunk.js",
+    "static/js/2.4071c3b1.chunk.js.map": "/docs/static/js/2.4071c3b1.chunk.js.map",
+    "index.html": "/docs/index.html",
+    "precache-manifest.55cee78375e7b9fa8a1d25215ea1c956.js": "/docs/precache-manifest.55cee78375e7b9fa8a1d25215ea1c956.js",
+    "service-worker.js": "/docs/service-worker.js",
+    "static/css/2.39a94384.chunk.css.map": "/docs/static/css/2.39a94384.chunk.css.map",
+    "static/css/main.bc127e99.chunk.css.map": "/docs/static/css/main.bc127e99.chunk.css.map"
 }
