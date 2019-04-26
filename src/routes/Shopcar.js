@@ -4,6 +4,17 @@ var itemList = [];
 
 class Shopcar extends Component {
 
+  constructor(props) {
+    super(props);
+    if (getJsonItem("itemList")) {  //先把location的資料匯入itemList
+      itemList = getJsonItem("itemList");
+    }
+    this.state = {
+       product:itemList,
+       num:0,
+      };
+  }
+
   componentDidMount = () => {
     this.props.onChange();
   }
@@ -48,12 +59,16 @@ class Shopcar extends Component {
   }
 
   shopcardata(p, index) {
-    // console.log(itemList);
+    // console.log(this.state.num);
+    if (this.state.num === 0){
+      this.setState({num:this.state.product[index].num})
+    }
+    
     return (
       <tr key={index}>
         <td width='20%'><img style={{ width: '50%' }} src={p.picture} alt="" /></td>
         <td>{p.name}</td>
-        <td><input id={p.id} value={p.num} onBlur={() => { this.ChangeNum(p.id) }} onChange={() => {}} /></td>
+        <td><input id={p.id} value={this.state.num} onBlur={() => { this.ChangeNum(p.id) }} onChange={(e) => {this.setState({num:e.target.value})}} /></td>
         <td>${p.price}</td>
         <td><button ref={index} onClick={() => { this.dltbtn(index) }}>刪除</button></td>
       </tr>
