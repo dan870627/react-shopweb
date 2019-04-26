@@ -1,4 +1,4 @@
-const API = '/api/drinks.json';
+const API = './api/drinks.json';
 
 function get(){
     return fetch(API).then(function (api){
