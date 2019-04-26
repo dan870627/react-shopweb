@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 var itemList = [];
+var num=[];
 
 class Shopcar extends Component {
 
@@ -11,12 +12,13 @@ class Shopcar extends Component {
     }
     this.state = {
        product:itemList,
-       num:0,
+       num:[],
       };
   }
 
   componentDidMount = () => {
     this.props.onChange();
+    this.setState({num})
   }
 
   ChangeNum(id) {
@@ -58,21 +60,29 @@ class Shopcar extends Component {
     }
   }
 
+  change(e,index){
+    num[index]=e.target.value
+    this.setState({num})
+  }
+
   shopcardata(p, index) {
-    // console.log(this.state.num);
-    if (this.state.num === 0){
-      this.setState({num:this.state.product[index].num})
+    console.log("state(product)：" + this.state.product[index].num)
+    console.log("state(num)：" + this.state.num);
+    if (this.state.num.length < 4){
+      num.push(this.state.product[index].num);
+      console.log("push");
     }
-    
+    console.log("array：" + num);
     return (
       <tr key={index}>
         <td width='20%'><img style={{ width: '50%' }} src={p.picture} alt="" /></td>
         <td>{p.name}</td>
-        <td><input id={p.id} value={this.state.num} onBlur={() => { this.ChangeNum(p.id) }} onChange={(e) => {this.setState({num:e.target.value})}} /></td>
+        <td><input id={p.id} value={num[index]} onBlur={() => { this.ChangeNum(p.id) }} onChange={(e) => {this.change(e,index)}} /></td>
         <td>${p.price}</td>
         <td><button ref={index} onClick={() => { this.dltbtn(index) }}>刪除</button></td>
       </tr>
     )
+    
   }
 
   render() {
