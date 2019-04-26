@@ -15,15 +15,15 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">Home
+                  <Link className="nav-link" to="/react-shopweb/">Home
                     <span className="sr-only">(current)</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about/">About</Link>
+                  <Link className="nav-link" to="/react-shopweb/about/">About</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/shopcar/">Shopcar</Link>
+                  <Link className="nav-link" to="/react-shopweb/shopcar/">Shopcar</Link>
                 </li>
               </ul>
             </div>

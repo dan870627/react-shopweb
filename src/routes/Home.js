@@ -9,13 +9,13 @@ class Home extends Component {
       <div className="col-lg-4 col-md-6 mb-4" key={index}>
         <div className="card h-100">
           <Link to={{
-            pathname: `/product/${p.id}`,
+            pathname: `/react-shopweb/product/${p.id}`,
             state: { product: p }
           }}><img className="card-img-top" src={p.picture} alt="" /></Link>
           <div className="card-body">
             <h4 className="card-title">
               <Link to={{
-                pathname: `/product/${p.id}`,
+                pathname: `/react-shopweb/product/${p.id}`,
                 state: { product: p }
               }}>{p.name}</Link>
             </h4>

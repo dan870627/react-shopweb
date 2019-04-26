@@ -71,10 +71,10 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="cbody">
-            <Route path="/" exact render={(props) => this.renderRoute(props, Home)} />
-            <Route path="/about" component={About} />
-            <Route path="/product" render={(props) => this.renderRoute(props, Product)} />
-            <Route path="/shopcar" render={(props) => this.renderRoute(props, Shopcar)} />
+            <Route path="/react-shopweb/" exact render={(props) => this.renderRoute(props, Home)} />
+            <Route path="/react-shopweb/about" component={About} />
+            <Route path="/react-shopweb/product" render={(props) => this.renderRoute(props, Product)} />
+            <Route path="/react-shopweb/shopcar" render={(props) => this.renderRoute(props, Shopcar)} />
           </div>
         </div>
       </Router>
