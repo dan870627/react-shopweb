@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/react-shopweb/static/js/runtime~main.50159344.js"
   },
   {
-    "revision": "9f0e5c8b3d12f56a423f",
-    "url": "/react-shopweb/static/js/main.20308c75.chunk.js"
+    "revision": "9d946dd919206f8de9fd",
+    "url": "/react-shopweb/static/js/main.4dabd68c.chunk.js"
   },
   {
     "revision": "ad91f7f81a2375da8cf6",
     "url": "/react-shopweb/static/js/2.4071c3b1.chunk.js"
   },
   {
-    "revision": "9f0e5c8b3d12f56a423f",
+    "revision": "9d946dd919206f8de9fd",
     "url": "/react-shopweb/static/css/main.bc127e99.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-shopweb/static/css/2.39a94384.chunk.css"
   },
   {
-    "revision": "f0c50bf101ccc44f4ef82efa6f6f3b65",
+    "revision": "e852e32991ddc5ec345f28bb60edcee9",
     "url": "/react-shopweb/index.html"
   }
 ];
