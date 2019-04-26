@@ -2,7 +2,7 @@
     "name": "react-shopweb",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://dan870627.github.io/react-shopweb/docs/index",
+    "homepage": "https://dan870627.github.io/react-shopweb",
     "dependencies": {
         "bootstrap": "^4.3.1",
         "jquery": "^3.4.0",
