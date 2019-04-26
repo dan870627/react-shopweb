@@ -68,7 +68,7 @@ class Shopcar extends Component {
   shopcardata(p, index) {
     console.log("state(product)：" + this.state.product[index].num)
     console.log("state(num)：" + this.state.num);
-    if (this.state.num.length < 4){
+    if (this.state.num.length < 5){
       num.push(this.state.product[index].num);
       console.log("push");
     }
