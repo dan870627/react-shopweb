@@ -152,7 +152,7 @@ class Shopcar extends Component {
                     </table>
                   </div>
                   <span id="total">總共：${this.props.total}</span>
-                  <button>結帳</button>
+                  <button onClick={() => {alert("總共：" + this.props.total)}}>結帳</button>
                 </div>
                 <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
               </div>
