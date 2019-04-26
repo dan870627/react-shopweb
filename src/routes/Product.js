@@ -14,7 +14,7 @@ class Product extends Component {
       list: [], 
       shopcar: props.shopcar 
     };
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   find = (array) => {
@@ -25,7 +25,7 @@ class Product extends Component {
   addShopcar = () => {
     if (getJsonItem("itemList")) {  //location有沒有資料
       itemList = getJsonItem("itemList");
-      console.log(itemList);
+      // console.log(itemList);
       // console.log(itemList.find(this.find))
 
       if (itemList.find(this.find) !== undefined) {  //先判別itemList有沒有這項商品
@@ -48,7 +48,7 @@ class Product extends Component {
 
     //set值到location
     this.setState({ list: itemList }, () => {
-      console.log(this.state);
+      // console.log(this.state);
       // console.log(this.state.shopcar);
     });
     // console.log(itemList);

@@ -14,12 +14,17 @@ class Shopcar extends Component {
        product:itemList,
        num:[],
       };
+      // console.log(this.num)
+      num=[];
   }
+
+
 
   componentDidMount = () => {
     this.props.onChange();
     this.setState({num})
   }
+
 
   ChangeNum(id) {
     //  let i=0;  可以用array find
@@ -33,10 +38,15 @@ class Shopcar extends Component {
     //   })
 
     let index = itemList.findIndex((p) => p.id === id);
+    // console.log("index：" + index)
+    // console.log("itemList：" + itemList[index].num)
+    // console.log("id：" + id);
+    // console.log("documentID：" + document.getElementById(id))
     var Str = document.getElementById(id);
     if (Str.value <= 0) {
       alert("請輸入大於0的數量");
-      document.getElementById(id).value = itemList[index].num;
+      num[index] = itemList[index].num;
+      this.setState({num})
       Str.focus();
     } else {
       itemList[index].num = Str.value;
@@ -50,8 +60,12 @@ class Shopcar extends Component {
       // var del = this.refs[id];
       // console.log(del)
       itemList.splice(id, 1);
+      num.splice(id,1);
+      this.setState({product:itemList})
+      this.setState({num})
+      // console.log(itemList);
       setJsonItem("itemList", itemList);
-      console.log(this.refs[id].parentElement.parentElement.children[2].children[0].value) ;
+      // console.log(this.refs[id].parentElement.parentElement.children[2].children[0].value) ;
       // console.log(itemList);
       this.props.onChange();
 
@@ -67,12 +81,17 @@ class Shopcar extends Component {
 
   shopcardata(p, index) {
     console.log("state(product)：" + this.state.product[index].num)
+    // console.log("state.product：" + this.state.product[index])
     console.log("state(num)：" + this.state.num);
-    if (this.state.num.length < 5){
+    console.log("num.length v.s. itemList.length：" + this.state.num.length + " / " + itemList.length)
+    
+    if (this.state.num.length < itemList.length){
+      console.log("push")
+      console.log("array(num)：" + num);
       num.push(this.state.product[index].num);
-      console.log("push");
+      // console.log("push");
     }
-    console.log("array：" + num);
+    // console.log("array：" + num);
     return (
       <tr key={index}>
         <td width='20%'><img style={{ width: '50%' }} src={p.picture} alt="" /></td>

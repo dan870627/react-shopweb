@@ -28,7 +28,7 @@ class App extends Component {
     this.getServer();
     if (getJsonItem("itemList")) {  //先把location的資料匯入itemList
       itemList = getJsonItem("itemList");
-      console.log(itemList);
+      // console.log(itemList);
     }
   }
 
@@ -50,8 +50,8 @@ class App extends Component {
     itemList.forEach((a) => {
       total += a.price * a.num
     })
-     this.setState({ total },() => console.log(this.state));
-     console.log(this.state.total)
+     this.setState({ total },() => {/*console.log(this.state)*/});
+    //  console.log(this.state.total)
   }
 
 
@@ -62,7 +62,7 @@ class App extends Component {
 
   setShopcar = (shopcar) => {
     // console.log(shopcar);
-    this.setState({ shopcar }, () => { console.log(this.state); });
+    this.setState({ shopcar }, () => { /*console.log(this.state);*/ });
   }
 
   render() {
