@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 var itemList = [];
-var num=[];
+var num = [];
 
 class Shopcar extends Component {
 
@@ -11,18 +11,18 @@ class Shopcar extends Component {
       itemList = getJsonItem("itemList");
     }
     this.state = {
-       product:itemList,
-       num:[],
-      };
-      // console.log(this.num)
-      num=[];
+      product: itemList,
+      num: [],
+    };
+    // console.log(this.num)
+    num = [];
   }
 
 
 
   componentDidMount = () => {
     this.props.onChange();
-    this.setState({num})
+    this.setState({ num })
   }
 
 
@@ -46,7 +46,7 @@ class Shopcar extends Component {
     if (Str.value <= 0) {
       alert("請輸入大於0的數量");
       num[index] = itemList[index].num;
-      this.setState({num})
+      this.setState({ num })
       Str.focus();
     } else {
       itemList[index].num = Str.value;
@@ -60,9 +60,9 @@ class Shopcar extends Component {
       // var del = this.refs[id];
       // console.log(del)
       itemList.splice(id, 1);
-      num.splice(id,1);
-      this.setState({product:itemList})
-      this.setState({num})
+      num.splice(id, 1);
+      this.setState({ product: itemList })
+      this.setState({ num })
       // console.log(itemList);
       setJsonItem("itemList", itemList);
       // console.log(this.refs[id].parentElement.parentElement.children[2].children[0].value) ;
@@ -74,9 +74,9 @@ class Shopcar extends Component {
     }
   }
 
-  change(e,index){
-    num[index]=e.target.value
-    this.setState({num})
+  change(e, index) {
+    num[index] = e.target.value
+    this.setState({ num })
   }
 
   shopcardata(p, index) {
@@ -84,8 +84,8 @@ class Shopcar extends Component {
     // console.log("state.product：" + this.state.product[index])
     console.log("state(num)：" + this.state.num);
     console.log("num.length v.s. itemList.length：" + this.state.num.length + " / " + itemList.length)
-    
-    if (this.state.num.length < itemList.length){
+
+    if (this.state.num.length < itemList.length) {
       console.log("push")
       console.log("array(num)：" + num);
       num.push(this.state.product[index].num);
@@ -96,12 +96,12 @@ class Shopcar extends Component {
       <tr key={index}>
         <td width='20%'><img style={{ width: '50%' }} src={p.picture} alt="" /></td>
         <td>{p.name}</td>
-        <td><input id={p.id} value={num[index]} onBlur={() => { this.ChangeNum(p.id) }} onChange={(e) => {this.change(e,index)}} /></td>
+        <td><input id={p.id} value={num[index]} onBlur={() => { this.ChangeNum(p.id) }} onChange={(e) => { this.change(e, index) }} /></td>
         <td>${p.price}</td>
         <td><button ref={index} onClick={() => { this.dltbtn(index) }}>刪除</button></td>
       </tr>
     )
-    
+
   }
 
   render() {
@@ -152,7 +152,7 @@ class Shopcar extends Component {
                     </table>
                   </div>
                   <span id="total">總共：${this.props.total}</span>
-                  <button onClick={() => {alert("總共：" + this.props.total + "元")}}>結帳</button>
+                  <button onClick={() => { alert("總共：" + this.props.total + "元") }}>結帳</button>
                 </div>
                 <div className="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
               </div>

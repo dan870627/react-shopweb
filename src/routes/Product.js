@@ -5,14 +5,13 @@ var itemList = [];
 
 class Product extends Component {
 
-
   constructor(props) {
     super(props);
     // console.log(props);
-    this.state = { 
-      produtc: props.location.state.product, 
-      list: [], 
-      shopcar: props.shopcar 
+    this.state = {
+      produtc: props.location.state.product,
+      list: [],
+      shopcar: props.shopcar
     };
     // console.log(this.state);
   }
@@ -32,8 +31,8 @@ class Product extends Component {
         itemList.forEach((element) => {
           if (element.id === this.state.produtc.id) {  //尋找商品id
             let tmp = parseInt(element.num);  //商品記數+1
-            tmp +=1;
-            element.num=tmp;
+            tmp += 1;
+            element.num = tmp;
             // console.log(element.num);
           }
         });
@@ -43,7 +42,7 @@ class Product extends Component {
 
     } else {
       itemList.push(this.state.produtc);
-      
+
     }
 
     //set值到location

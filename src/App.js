@@ -32,7 +32,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount =() =>{
+  componentDidMount = () => {
     this.checkSum();
   }
 
@@ -42,22 +42,35 @@ class App extends Component {
     this.setState({ product });  //有setState會重新跑一次(狀態改變)
   }
 
-   checkSum = () => {
+  checkSum = () => {
     if (getJsonItem("itemList")) {  //先把location的資料匯入itemList
       itemList = getJsonItem("itemList");
     }
-    let total = 0;
-    itemList.forEach((a) => {
-      total += a.price * a.num
-    })
-     this.setState({ total },() => {/*console.log(this.state)*/});
+    // let total = 0;
+    // itemList.forEach((a) => {
+    //   total += a.price * a.num
+    // })
+    // 專業一點用迭代 reduce 做法
+    const total = itemList.reduce((acc, { price, num }) => acc + price * num, 0);
+    this.setState({ total }, () => {/*console.log(this.state)*/ });
     //  console.log(this.state.total)
   }
 
 
   renderRoute(props, Component) {
     // console.log(props);
-    return <Component {...props} product={this.state.product} shopcar={this.state.shopcar} onAdd={this.setShopcar} total={this.state.total} onChange={this.checkSum} />
+    return (
+      <Component
+        {...props}
+        // 既然全都要把 state 傳進去，那可以直接把 this.state 展開傳入
+        {...this.state}
+        // product={this.state.product}
+        // shopcar={this.state.shopcar}
+        onAdd={this.setShopcar}
+        // total={this.state.total}
+        onChange={this.checkSum}
+      />
+    )
   }
 
   setShopcar = (shopcar) => {
@@ -71,6 +84,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="cbody">
+            {/** path 根路徑最好就直接使用 path="/" */}
             <Route path="/react-shopweb/" exact render={(props) => this.renderRoute(props, Home)} />
             <Route path="/react-shopweb/about" component={About} />
             <Route path="/react-shopweb/product" render={(props) => this.renderRoute(props, Product)} />
